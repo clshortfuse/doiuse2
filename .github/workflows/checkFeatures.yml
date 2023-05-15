@@ -1,0 +1,45 @@
+name: Feature Updater
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-features:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the main branch
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+      # Check for new features if they exist
+      - name: Check for new features
+        run: |
+          echo "Checking for new features"
+          npm ci
+          npm run updateFeatures
+      # check if there are any changes (do not check package.json)
+      - name: Diff
+        run: |
+          if git diff --name-only | awk '!/package.json/'; then
+            echo "Changes found:"
+            git diff --name-only | awk '!/package.json/'
+            export NO_CHANGES=false
+          else
+            echo "No changes found"
+            export NO_CHANGES=true
+          fi
+      # Create a PR from the feature-updates branch to the main branch if it doesn't exist
+      - name: Create PR
+        if: ${{ !env.NO_CHANGES }}
+        uses: peter-evans/create-pull-request@v4
+        id: cpr
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: New Features
+          base: main
+          branch: feature-updates
+          commit-message: Add new features
+          body: "This PR adds stubs for new features from caniuse"

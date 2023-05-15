@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/clshortfuse/doiuse2.svg?branch=master)](https://travis-ci.org/clshortfuse/doiuse2)
 [![Release Notes](https://release-notes.com/badges/v2.svg)](https://release-notes.com/@open-source-community/clshortfuse-doiuse2)
 
 # doiuse
