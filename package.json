@@ -1,5 +1,5 @@
 {
-  "name": "@rjwadley/doiuse",
+  "name": "doiuse2",
   "version": "6.1.0",
   "description": "Lint CSS for browser support against caniuse database",
   "main:": "./exports/index.cjs",
@@ -18,7 +18,7 @@
   "bin": "./bin/cli.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anandthakker/doiuse.git"
+    "url": "https://github.com/clshortfuse/doiuse2.git"
   },
   "keywords": [
     "lint",
@@ -28,17 +28,16 @@
     "caniuse",
     "stylelint"
   ],
+  "author": "Carlos Lopez Jr.",
   "contributors": [
-    "Robbie Wadley (https://github.com/RJWadley)",
-    "Carlos Lopez Jr. (https://github.com/clshortfuse)",
     "Anand Thakker <mail@anandthakker.net> (http://www.anandthakker.net/)",
     "Piotr Kuczynski <piotr.kuczynski@gmail.com> (https://github.com/pkuczynski)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anandthakker/doiuse/issues"
+    "url": "https://github.com/clshortfuse/doiuse2/issues"
   },
-  "homepage": "https://github.com/anandthakker/doiuse",
+  "homepage": "https://github.com/clshortfuse/doiuse2",
   "engines": {
     "node": ">=14"
   },

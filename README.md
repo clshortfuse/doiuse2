@@ -1,4 +1,4 @@
-[![Release Notes](https://release-notes.com/badges/v2.svg)](https://release-notes.com/@open-source-community/anandthakker-doiuse)
+[![Release Notes](https://release-notes.com/badges/v2.svg)](https://release-notes.com/@open-source-community/clshortfuse-doiuse2)
 
 # doiuse
 
@@ -7,7 +7,7 @@ Lint CSS for browser support against [Can I use](http://caniuse.com) database.
 ## Install
 
 ```sh
-npm install -g doiuse
+npm install -g doiuse2
 ```
 
 ## Usage Examples
